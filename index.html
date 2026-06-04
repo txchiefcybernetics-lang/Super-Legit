@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMSCBC | Customs Brokerage & Consultancy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2em;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .tagline {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .status {
+            text-align: center;
+            color: #e74c3c;
+            font-style: italic;
+            margin-bottom: 30px;
+            padding: 10px;
+            background: #ffe6e6;
+            border-radius: 5px;
+        }
+        
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 2px solid #ecf0f1;
+        }
+        
+        .services-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .services-section li {
+            padding: 12px 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .services-section li:hover {
+            background: #f0f3ff;
+            border-left-color: #764ba2;
+            transform: translateX(5px);
+        }
+        
+        .documents-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        
+        .documents-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .document-item:hover {
+            border-color: #667eea;
+            background: #f0f3ff;
+            transform: translateX(5px);
+        }
+        
+        .doc-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+        
+        .doc-info {
+            flex-grow: 1;
+        }
+        
+        .doc-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .doc-type {
+            font-size: 0.85em;
+            color: #7f8c8d;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #764ba2;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FM Sardan Customs Brokerage and Consultancy</h1>
+        <p class="tagline">Professional Customs Brokerage and Consultancy Services</p>
+        <p class="status"><em>Website currently under development.</em></p>
+        
+        <hr>
+        
+        <div class="services-section">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Import Clearance Processing</li>
+                <li>Export Documentation</li>
+                <li>Customs Consultancy</li>
+                <li>Tariff Classification Advice</li>
+            </ul>
+        </div>
+        
+        <hr>
+        
+        <div class="documents-section">
+            <h2>📁 Download Our Documents</h2>
+            
+            <div class="documents-grid">
+                <div class="document-item">
+                    <div class="doc-icon">📄</div>
+                    <div class="doc-info">
+                        <div class="doc-name">FMS CBC Company Profile</div>
+                        <div class="doc-type">PDF Document</div>
+                    </div>
+                    <a href="FMS%20CBC%20COMPANY%20PROFILE.pdf" class="btn" target="_blank" download>
+                        View PDF
+                    </a>
+                </div>
+                
+                <div class="document-item">
+                    <div class="doc-icon">📋</div>
+                    <div class="doc-info">
+                        <div class="doc-name">Services Brochure</div>
+                        <div class="doc-type">Coming Soon</div>
+                    </div>
+                    <button class="btn" disabled style="opacity: 0.6; cursor: not-allowed;">
+                        Coming Soon
+                    </button>
+                </div>
+                
+                <div class="document-item">
+                    <div class="doc-icon">📑</div>
+                    <div class="doc-info">
+                        <div class="doc-name">Pricing & Rates</div>
+                        <div class="doc-type">Coming Soon</div>
+                    </div>
+                    <button class="btn" disabled style="opacity: 0.6; cursor: not-allowed;">
+                        Coming Soon
+                    </button>
+                </div>
+                
+                <div class="document-item">
+                    <div class="doc-icon">📊</div>
+                    <div class="doc-info">
+                        <div class="doc-name">Case Studies</div>
+                        <div class="doc-type">Coming Soon</div>
+                    </div>
+                    <button class="btn" disabled style="opacity: 0.6; cursor: not-allowed;">
+                        Coming Soon
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2026 FM Sardan Customs Brokerage and Consultancy. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
