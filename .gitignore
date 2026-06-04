@@ -1,0 +1,17 @@
+# Ignore dependency directories
+/vendor/
+
+# Ignore local configuration files (This is critical for security!)
+.env
+config.php
+config.local.php
+credentials.json
+
+# Ignore IDE/OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore logs
+*.log
+node_modules/
