@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Sardan Customs Brokerage and Consultancy</title>
+    <style>
+        :root {
+            --primary: #0b3c5d;      /* Corporate Navy Blue */
+            --secondary: #328cc1;    /* Accent Blue */
+            --accent: #1d7a42;       /* Trust Emerald Green */
+            --dark: #1d2731;         /* Dark Text/Background */
+            --light: #f8fafc;        /* Light Grey Background */
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Hero / Header Section */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #062237 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 2rem;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .dev-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-top-color: var(--accent);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #556575;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            align-self: flex-start;
+            transition: color 0.2s;
+        }
+
+        .card a:hover {
+            color: var(--accent);
+        }
+
+        /* Our Advantage / Values Section */
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .adv-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border-left: 4px solid var(--accent);
+        }
+
+        .adv-item h3 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .adv-item p {
+            font-size: 0.9rem;
+            color: #556575;
+        }
+
+        /* Document Hub Styles */
+        .doc-row {
+            background: var(--white);
+            padding: 1.25rem 2rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .doc-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .doc-icon {
+            font-size: 2rem;
+        }
+
+        .doc-title {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .doc-status {
+            font-size: 0.85rem;
+            color: #74808c;
+        }
+
+        /* Buttons and Inputs */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .btn-disabled {
+            background-color: #e2e8f0;
+            color: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        /* Form Layout */
+        .form-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-container p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #556575;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: var(--dark);
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 2rem;
+            font-size: 0.9rem;
+            margin-top: 6rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header>
+        <h1>FM Sardan Customs Brokerage & Consultancy</h1>
+        <p>Our services are built to ease your logistics requirements. No matter the complexity of your shipment or supply chain hurdles, we have the strategic solutions to solve them.</p>
+        <span class="dev-badge">Website Currently Under Development</span>
+    </header>
+
+    <div class="container">
+
+        <!-- SERVICES SECTION -->
+        <section>
+            <h2>Our Core Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <div class="card-icon">🚢</div>
+                        <h3>Import Clearance Processing</h3>
+                        <p>Our licensed customs broker ensures your shipment clears customs smoothly and on time, keeping your business operations running without interruption.</p>
+                    </div>
+                    <a href="#quote-section">Learn more →</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">✈️</div>
+                        <h3>Export Documentation</h3>
+                        <p>We handle the heavy lifting of export paperwork, trade compliances, and clearances so your products can reach the global market hassle-free.</p>
+                    </div>
+                    <a href="#quote-section">Learn more →</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">💼</div>
+                        <h3>Customs Consultancy</h3>
+                        <p>Navigate complex trade regulations with ease. Our experts guide you through compliance audits, legal tariff frameworks, and procedural planning.</p>
+                    </div>
+                    <a href="#quote-section">Learn more →</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="card-icon">📊</div>
+                        <h3>Tariff Classification Advice</h3>
+                        <p>Avoid costly delays and penalties. We provide accurate HS Code and tariff classification advice to ensure correct duty and tax assessments.</p>
+                    </div>
+                    <a href="#quote-section">Learn more →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVANTAGE SECTION -->
+        <section>
+            <h2>Our Advantage</h2>
+            <div class="advantage-grid">
+                <div class="adv-item">
+                    <h3>Strategic Excellence</h3>
+                    <p>We don't just clear cargo; we analyze your logistics flow to find the most efficient pathways for your operation.</p>
+                </div>
+                <div class="adv-item">
+                    <h3>Accountable Leadership</h3>
+                    <p>Transparency is our absolute policy. You get full accountability and honest processing at every step.</p>
+                </div>
+                <div class="adv-item">
+                    <h3>Adaptive Innovation</h3>
+                    <p>We leverage modern tech and proactive solutions to bypass traditional supply chain roadblocks and delays.</p>
+                </div>
+                <div class="adv-item">
+                    <h3>Distinguished Professionalism</h3>
+                    <p>Whether you run a large corporation or a growing business, our team is dedicated to exceeding client expectations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOCUMENT HUB SECTION -->
+        <section>
+            <h2>📁 Resource Center</h2>
+            <div class="doc-list">
+                <div class="doc-row">
+                    <div class="doc-info">
+                        <div class="doc-icon">📄</div>
+                        <div>
+                            <div class="doc-title">FMS CBC Company Profile</div>
+                            <div class="doc-status">PDF Document • Available</div>
+                        </div>
+                    </div>
+                    <a href="FMS CBC COMPANY PROFILE.pdf" download class="btn">Download PDF</a>
+                </div>
+
+                <div class="doc-row">
+                    <div class="doc-info">
+                        <div class="doc-icon">📋</div>
+                        <div>
+                            <div class="doc-title">Services Brochure</div>
+                            <div class="doc-status">Coming Soon</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-disabled" enabled>available</button>
+                </div>
+
+                <div class="doc-row">
+                    <div class="doc-info">
+                        <div class="doc-icon">📑</div>
+                        <div>
+                            <div class="doc-title">Template</div>
+                            <div class="doc-status">Coming Soon</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-disabled" disabled>Unavailable</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / REQUEST QUOTE SECTION -->
+        <section id="quote-section">
+            <h2>📋 Request a Quote</h2>
+            <div class="form-container">
+                <p>Fill out the form below and our licensed customs broker will get in touch with you shortly to assist with your customs and logistics needs.</p>
+                
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="username@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" class="form-control" placeholder="Your registered company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone / Mobile Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="+63 9xx xxx xxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Inquiry Details</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Describe your shipment details or consulting requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; padding: 0.8rem;">Submit Request</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 FM Sardan Customs Brokerage and Consultancy. All rights reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Creating Sustainable Impact Through Responsible Trade.</p>
+    </footer>
+
+</body>
+</html>
