@@ -1,4 +1,4 @@
-kenwellitsolution.com
+  https://kenwellitsolution.com/cpanel:1
 1. Local Development (.devcontainer.json & .gitignore)
 Your development lifecycle starts inside an isolated environment. Instead of installing Node.js or packages globally on your local computer, the container manages it.
 
@@ -42,7 +42,7 @@ Plaintext
 ├── package-lock.json             # Locked dependency versions for exact production builds
 ├── README.md                     # Main repository documentation
 └── SECURITY.md                   # Instructions for reporting security flaws
-Next Step to Go Live
+Next Step to Go Live>>Headers<<message
 If you are using GitHub Pages to host this:
 
 Push this entire structure to your GitHub repository.
